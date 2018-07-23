@@ -12,7 +12,7 @@ route.get('/',(req,res)=>{
 
 }).catch((err)=>{
 	res.status(500).send({
-		error:"could not find Access"
+		error:"could not find Access list"
 	})
 
 })
@@ -45,11 +45,11 @@ route.get('/access-list',(req,res)=>{
         }]
         
     }]
-}).then((todos)=>{
-    res.status(200).send(todos)
+}).then((accesslistinformation)=>{
+    res.status(200).send(accesslistinformation)
 }).catch((err)=>{
    res.status(201).send({
-   	error:"Could not get Tasks For this user and todolist"
+   	error:"Could not get Information For this user and todolist"
    })
 })
 
